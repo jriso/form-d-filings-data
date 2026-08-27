@@ -1,12 +1,12 @@
-# Private Placement Ledger
+# Form D Filings Data
 
-A newest-first ledger of US private placements reported to the SEC on Form D.
+Parsed SEC Form D filings — US private placements, newest first.
 One line is one filing — an opening or a later closing on the same offering —
 carrying the capital taken in at that entry rather than a running total.
 
 - **Source:** SEC EDGAR Form D structured data (public domain)
 - **Coverage:** complete through 2026-06-30; this page holds the most recent
-  11,037 entries (from 2025-03-01) of 156,258 in the full ledger
+  11,037 entries (from 2025-03-01) of 156,258 in the full dataset
 - **Built from:** quarterly Form D ZIPs, amendment chains collapsed, pooled
   funds / Investment Company Act 3(c) vehicles / M&A financings excluded
 

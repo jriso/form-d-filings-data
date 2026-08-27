@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Private Placement Ledger — SEC Form D</title>
+<title>Form D Filings — US Private Placement Data</title>
+<meta name="description" content="Parsed SEC Form D filings: US private placements, newest first. One line per filing, showing capital taken in at that entry.">
 <style>
   *,*::before,*::after{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%}
@@ -235,7 +236,7 @@
   <div class="wrap masthead-inner">
     <div class="title-block">
       <span class="eyebrow">SEC EDGAR · Regulation D · Public domain</span>
-      <h1>Private Placement Ledger</h1>
+      <h1>Form D Filings</h1>
       <p class="standfirst">
         Every private placement a US company reports to the SEC under
         Regulation D, newest first. One line is one <em>entry</em> — an opening
@@ -274,7 +275,7 @@
 
 <main class="wrap">
   <div class="toolbar">
-    <input class="search" id="q" type="search" placeholder="Search company, city, investor…" aria-label="Search ledger entries">
+    <input class="search" id="q" type="search" placeholder="Search company, city, investor…" aria-label="Search Form D filings">
     <select class="filter" id="ind" aria-label="Filter by industry"><option value="">All industries</option></select>
     <select class="filter" id="kind" aria-label="Filter by entry type">
       <option value="">All entries</option>
@@ -433,7 +434,7 @@
     if (!all.length) {
       empty.innerHTML = "Nothing here matches. This page holds the most recent " +
         fmtInt(S.loaded) + " entries (" + S.slice_lo + " to " + S.slice_hi +
-        ") — the full ledger has " + fmtInt(S.total_events) +
+        ") — the full dataset has " + fmtInt(S.total_events) +
         " and a hosted version would search all of them.";
     }
     document.getElementById("body").innerHTML = rows.map((r, i) => {
@@ -523,7 +524,7 @@
   document.getElementById("scope").textContent =
     "Showing the most recent " + fmtInt(S.loaded) + " entries, " + S.slice_lo +
     " to " + S.slice_hi + ", of " + fmtInt(S.total_events) +
-    " in the full ledger. Search covers the loaded slice.";
+    " in the full dataset. Search covers the loaded slice.";
   document.querySelector('th[data-k="event_date"]').setAttribute("aria-sort", "descending");
   render();
 </script>
